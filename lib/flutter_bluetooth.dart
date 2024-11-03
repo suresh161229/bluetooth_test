@@ -7,7 +7,7 @@ class FlutterBluetooth {
 
   static Future<bool> enableBluetooth() async {
     try {
-      final bool isEnabled = await _channel.invokeMethod('enableBluetooth');
+      final bool isEnabled = await _channel.invokeMethod('isBluetoothEnabled');
       return isEnabled;
     } catch (e) {
       throw Exception('Failed to enable Bluetooth: $e');
